@@ -22,13 +22,8 @@ var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-/**
- * Find GraphQL files based on a glob pattern and merge the results.
- * @param {string} fileGlob - A glob pattern to find files, e.g. '*.graphql'
- * @return {Promise<string>} A promise of the resulting string.
- */
 var mergeFileGlob = exports.mergeFileGlob = function () {
-  var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(fileGlob) {
+  var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(fileGlob) {
     var fileDetails, fileContents;
     return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
@@ -65,7 +60,7 @@ var mergeFileGlob = exports.mergeFileGlob = function () {
 
 
 var mergeFilePaths = exports.mergeFilePaths = function () {
-  var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2(filePaths) {
+  var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2(filePaths) {
     var fileDetails, fileContents;
     return _regenerator2.default.wrap(function _callee2$(_context2) {
       while (1) {
@@ -102,7 +97,7 @@ var mergeFilePaths = exports.mergeFilePaths = function () {
 
 
 var cli = exports.cli = function () {
-  var _ref3 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee4() {
+  var _ref3 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee4() {
     var _this = this;
 
     var program = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _commander2.default;
@@ -133,7 +128,7 @@ var cli = exports.cli = function () {
 
             cliAddHelp(cliAddBasics(command));
             command.action(function () {
-              var _ref4 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee3(inputGlob, options) {
+              var _ref4 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3(inputGlob, options) {
                 return _regenerator2.default.wrap(function _callee3$(_context3) {
                   while (1) {
                     switch (_context3.prev = _context3.next) {
@@ -168,7 +163,7 @@ var cli = exports.cli = function () {
 }();
 
 var cliAction = exports.cliAction = function () {
-  var _ref5 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee5(program) {
+  var _ref5 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee5(program) {
     var fileGlobs = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var _ref6 = arguments[2];
     var outFile = _ref6.outFile;
@@ -248,6 +243,12 @@ exports.default = {
   mergeStrings: mergeStrings,
   mergeString: mergeString,
   mergeAst: mergeAst
+
+  /**
+   * Find GraphQL files based on a glob pattern and merge the results.
+   * @param {string} fileGlob - A glob pattern to find files, e.g. '*.graphql'
+   * @return {Promise<string>} A promise of the resulting string.
+   */
 };
 function mergeStrings(schemaStrs) {
   var schemaStr = schemaStrs.join('\n\n');
